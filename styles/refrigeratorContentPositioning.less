@@ -1,0 +1,162 @@
+@import "variables";
+:root {
+  --topFirstLine_positions-1: ~"calc(var(--pos1topMargin) + 13.8vw)";
+  --topSecondLine_positions-1: ~"calc(var(--pos1topMargin) + 25.0vw)";
+  --topThirdLine_positions-1: ~"calc(var(--pos1topMargin) + 37.8vw)";
+  --topFourthLine_positions-1: ~"calc(var(--pos1topMargin) + 50.1vw)";
+  --topFifthLine_positions-1: ~"calc(var(--pos1topMargin) + 61.8vw)";
+  --topSixthLine_positions-1: ~"calc(var(--pos1topMargin) + 73.8vw)";
+  --topSeventhLine_positions-1: ~"calc(var(--pos1topMargin) + 86.8vw)";
+
+  --leftFirstColumn_positions-1: 24.5vw;
+  --leftSecondColumn_positions-1: 33.5vw;
+  --leftThirdColumn_positions-1: 45vw;
+  --leftFourthColumn_positions-1: 54vw;
+  --leftFifthColumn_positions-1: 62vw;
+
+
+  --topFirstLine_positions-2: 12.5%;
+  --topSecondLine_positions-2: 22.5%;
+  --topThirdLine_positions-2: 34%;
+  --topFourthLine_positions-2: 45%;
+  --topFifthLine_positions-2: 55.5%;
+  --topSixthLine_positions-2: 66.5%;
+  --topSeventhLine_positions-2: 78%;
+
+  --leftFirstColumn_positions-2: ~"calc(var(--pos2leftMargin) + var(--mainHeight)*0.215)";
+  --leftSecondColumn_positions-2: ~"calc(var(--pos2leftMargin) + var(--mainHeight)*0.295)";
+  --leftThirdColumn_positions-2: ~"calc(var(--pos2leftMargin) + var(--mainHeight)*0.398)";
+  --leftFourthColumn_positions-2: ~"calc(var(--pos2leftMargin) + var(--mainHeight)*0.478)";
+  --leftFifthColumn_positions-2: ~"calc(var(--pos2leftMargin) + var(--mainHeight)*0.552)";
+}
+
+#main {
+  height: var(--mainHeight);
+  width: 100%;
+  position: relative;
+  figure {
+    position: absolute;
+    margin: ~"calc(var(--navMargin)/1.5)";
+    padding: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+    overflow: hidden;
+  }
+  &.positions-1{
+    figure {
+      width: ~"calc(7.5vw)";
+      height: ~"calc(10.3vw)";
+      font-size: 2.5vw;
+      text-shadow: #ffffff 0.1vw 0.1vw 0.1vw, #ffffff -0.1vw -0.1vw 0.1vw;
+      img {
+        height: 7.2vw;
+      }
+      &[data-index$="1"], &[data-index$="6"]{
+        left: var(--leftFirstColumn_positions-1);
+      }
+      &[data-index$="2"], &[data-index$="7"]{
+        left: var(--leftSecondColumn_positions-1);
+      }
+      &[data-index$="3"], &[data-index$="8"]{
+        left: var(--leftThirdColumn_positions-1);
+      }
+      &[data-index$="4"], &[data-index$="9"]{
+        left: var(--leftFourthColumn_positions-1);
+      }
+      &[data-index$="5"], &[data-index$="0"]{
+        left: var(--leftFifthColumn_positions-1);
+      }
+      &[data-index~="1"], &[data-index~="2"], &[data-index~="3"], &[data-index~="4"], &[data-index~="5"] {
+        top: var(--topFirstLine_positions-1);
+      }
+      &[data-index~="6"], &[data-index~="7"], &[data-index~="8"], &[data-index~="9"], &[data-index~="10"] {
+        top: var(--topSecondLine_positions-1);
+      }
+      &[data-index~="11"], &[data-index~="12"]{
+        top: ~"calc(var(--topThirdLine_positions-1) - 3vw)";
+      }
+      &[data-index~="13"], &[data-index~="14"], &[data-index~="15"] {
+        top: var(--topThirdLine_positions-1);
+      }
+      &[data-index~="16"], &[data-index~="17"]{
+        top: ~"calc(var(--topFourthLine_positions-1) - 2vw)";
+      }
+      &[data-index~="18"], &[data-index~="19"], &[data-index~="20"] {
+        top: var(--topFourthLine_positions-1);
+      }
+      &[data-index~="21"], &[data-index~="22"]{
+        top: ~"calc(var(--topFifthLine_positions-1) - 1vw)";
+      }
+      &[data-index~="23"], &[data-index~="24"], &[data-index~="25"] {
+        top: var(--topFifthLine_positions-1);
+      }
+      &[data-index~="26"], &[data-index~="27"], &[data-index~="28"], &[data-index~="29"], &[data-index~="30"] {
+        top: var(--topSixthLine_positions-1);
+      }
+      &[data-index~="31"], &[data-index~="32"], &[data-index~="33"], &[data-index~="34"], &[data-index~="35"] {
+        top: var(--topSeventhLine_positions-1);
+      }
+    }
+  }
+  &.positions-2{
+    figure {
+      width: ~"calc(var(--mainHeight)*0.073)";
+      height: ~"calc(var(--mainHeight)*0.09)";
+      font-size: ~"calc(var(--mainHeight)*0.022)";
+      text-shadow: #ffffff 0.1vh 0.1vh 0.1vh, #ffffff -0.1vh -0.1vh 0.1vh;
+      img {
+        height: ~"calc(var(--mainHeight)*0.064)";
+      }
+      &[data-index$="1"], &[data-index$="6"]{
+        left: var(--leftFirstColumn_positions-2);
+      }
+      &[data-index$="2"], &[data-index$="7"]{
+        left: var(--leftSecondColumn_positions-2);
+      }
+      &[data-index$="3"], &[data-index$="8"]{
+        left: var(--leftThirdColumn_positions-2);
+      }
+      &[data-index$="4"], &[data-index$="9"]{
+        left: var(--leftFourthColumn_positions-2);
+      }
+      &[data-index$="5"], &[data-index$="0"]{
+        left: var(--leftFifthColumn_positions-2);
+      }
+      &[data-index~="1"], &[data-index~="2"], &[data-index~="3"], &[data-index~="4"], &[data-index~="5"] {
+        top: var(--topFirstLine_positions-2);
+      }
+      &[data-index~="6"], &[data-index~="7"], &[data-index~="8"], &[data-index~="9"], &[data-index~="10"] {
+        top: var(--topSecondLine_positions-2);
+      }
+      &[data-index~="11"], &[data-index~="12"]{
+        top: ~"calc(var(--topThirdLine_positions-2) - var(--mainHeight)*0.025)";
+      }
+      &[data-index~="13"], &[data-index~="14"], &[data-index~="15"] {
+        top: var(--topThirdLine_positions-2);
+      }
+      &[data-index~="16"], &[data-index~="17"]{
+        top: ~"calc(var(--topFourthLine_positions-2) - var(--mainHeight)*0.02)";
+      }
+      &[data-index~="18"], &[data-index~="19"], &[data-index~="20"] {
+        top: var(--topFourthLine_positions-2);
+      }
+      &[data-index~="21"], &[data-index~="22"]{
+        top: ~"calc(var(--topFifthLine_positions-2) - var(--mainHeight)*0.01)";
+      }
+      &[data-index~="23"], &[data-index~="24"], &[data-index~="25"] {
+        top: var(--topFifthLine_positions-2);
+      }
+      &[data-index~="26"], &[data-index~="27"], &[data-index~="28"], &[data-index~="29"], &[data-index~="30"] {
+        top: var(--topSixthLine_positions-2);
+      }
+      &[data-index~="31"], &[data-index~="32"], &[data-index~="33"], &[data-index~="34"], &[data-index~="35"] {
+        top: var(--topSeventhLine_positions-2);
+      }
+    }
+  }
+}

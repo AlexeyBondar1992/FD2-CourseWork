@@ -1,0 +1,219 @@
+:root {
+  --navHeight: 70px;
+  --mainHeight: calc(100vh - var(--navHeight)*2);
+  --pos1topMargin: calc((var(--mainHeight) - 100vw*1.11567)/2);
+  --pos2leftMargin: calc((100vw - var(--mainHeight)*0.89632)/2);
+  --navMargin: 5px;
+}
+:root {
+  --topFirstLine_positions-1: calc(var(--pos1topMargin) + 13.8vw);
+  --topSecondLine_positions-1: calc(var(--pos1topMargin) + 25.0vw);
+  --topThirdLine_positions-1: calc(var(--pos1topMargin) + 37.8vw);
+  --topFourthLine_positions-1: calc(var(--pos1topMargin) + 50.1vw);
+  --topFifthLine_positions-1: calc(var(--pos1topMargin) + 61.8vw);
+  --topSixthLine_positions-1: calc(var(--pos1topMargin) + 73.8vw);
+  --topSeventhLine_positions-1: calc(var(--pos1topMargin) + 86.8vw);
+  --leftFirstColumn_positions-1: 24.5vw;
+  --leftSecondColumn_positions-1: 33.5vw;
+  --leftThirdColumn_positions-1: 45vw;
+  --leftFourthColumn_positions-1: 54vw;
+  --leftFifthColumn_positions-1: 62vw;
+  --topFirstLine_positions-2: 12.5%;
+  --topSecondLine_positions-2: 22.5%;
+  --topThirdLine_positions-2: 34%;
+  --topFourthLine_positions-2: 45%;
+  --topFifthLine_positions-2: 55.5%;
+  --topSixthLine_positions-2: 66.5%;
+  --topSeventhLine_positions-2: 78%;
+  --leftFirstColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.215);
+  --leftSecondColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.295);
+  --leftThirdColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.398);
+  --leftFourthColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.478);
+  --leftFifthColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.552);
+}
+#main {
+  height: var(--mainHeight);
+  width: 100%;
+  position: relative;
+}
+#main figure {
+  position: absolute;
+  margin: calc(var(--navMargin)/1.5);
+  padding: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+#main.positions-1 figure {
+  width: calc(7.5vw);
+  height: calc(10.3vw);
+  font-size: 2.5vw;
+  text-shadow: #ffffff 0.1vw 0.1vw 0.1vw, #ffffff -0.1vw -0.1vw 0.1vw;
+}
+#main.positions-1 figure img {
+  height: 7.2vw;
+}
+#main.positions-1 figure[data-index$="1"],
+#main.positions-1 figure[data-index$="6"] {
+  left: var(--leftFirstColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="2"],
+#main.positions-1 figure[data-index$="7"] {
+  left: var(--leftSecondColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="3"],
+#main.positions-1 figure[data-index$="8"] {
+  left: var(--leftThirdColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="4"],
+#main.positions-1 figure[data-index$="9"] {
+  left: var(--leftFourthColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="5"],
+#main.positions-1 figure[data-index$="0"] {
+  left: var(--leftFifthColumn_positions-1);
+}
+#main.positions-1 figure[data-index~="1"],
+#main.positions-1 figure[data-index~="2"],
+#main.positions-1 figure[data-index~="3"],
+#main.positions-1 figure[data-index~="4"],
+#main.positions-1 figure[data-index~="5"] {
+  top: var(--topFirstLine_positions-1);
+}
+#main.positions-1 figure[data-index~="6"],
+#main.positions-1 figure[data-index~="7"],
+#main.positions-1 figure[data-index~="8"],
+#main.positions-1 figure[data-index~="9"],
+#main.positions-1 figure[data-index~="10"] {
+  top: var(--topSecondLine_positions-1);
+}
+#main.positions-1 figure[data-index~="11"],
+#main.positions-1 figure[data-index~="12"] {
+  top: calc(var(--topThirdLine_positions-1) - 3vw);
+}
+#main.positions-1 figure[data-index~="13"],
+#main.positions-1 figure[data-index~="14"],
+#main.positions-1 figure[data-index~="15"] {
+  top: var(--topThirdLine_positions-1);
+}
+#main.positions-1 figure[data-index~="16"],
+#main.positions-1 figure[data-index~="17"] {
+  top: calc(var(--topFourthLine_positions-1) - 2vw);
+}
+#main.positions-1 figure[data-index~="18"],
+#main.positions-1 figure[data-index~="19"],
+#main.positions-1 figure[data-index~="20"] {
+  top: var(--topFourthLine_positions-1);
+}
+#main.positions-1 figure[data-index~="21"],
+#main.positions-1 figure[data-index~="22"] {
+  top: calc(var(--topFifthLine_positions-1) - 1vw);
+}
+#main.positions-1 figure[data-index~="23"],
+#main.positions-1 figure[data-index~="24"],
+#main.positions-1 figure[data-index~="25"] {
+  top: var(--topFifthLine_positions-1);
+}
+#main.positions-1 figure[data-index~="26"],
+#main.positions-1 figure[data-index~="27"],
+#main.positions-1 figure[data-index~="28"],
+#main.positions-1 figure[data-index~="29"],
+#main.positions-1 figure[data-index~="30"] {
+  top: var(--topSixthLine_positions-1);
+}
+#main.positions-1 figure[data-index~="31"],
+#main.positions-1 figure[data-index~="32"],
+#main.positions-1 figure[data-index~="33"],
+#main.positions-1 figure[data-index~="34"],
+#main.positions-1 figure[data-index~="35"] {
+  top: var(--topSeventhLine_positions-1);
+}
+#main.positions-2 figure {
+  width: calc(var(--mainHeight)*0.073);
+  height: calc(var(--mainHeight)*0.09);
+  font-size: calc(var(--mainHeight)*0.022);
+  text-shadow: #ffffff 0.1vh 0.1vh 0.1vh, #ffffff -0.1vh -0.1vh 0.1vh;
+}
+#main.positions-2 figure img {
+  height: calc(var(--mainHeight)*0.064);
+}
+#main.positions-2 figure[data-index$="1"],
+#main.positions-2 figure[data-index$="6"] {
+  left: var(--leftFirstColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="2"],
+#main.positions-2 figure[data-index$="7"] {
+  left: var(--leftSecondColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="3"],
+#main.positions-2 figure[data-index$="8"] {
+  left: var(--leftThirdColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="4"],
+#main.positions-2 figure[data-index$="9"] {
+  left: var(--leftFourthColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="5"],
+#main.positions-2 figure[data-index$="0"] {
+  left: var(--leftFifthColumn_positions-2);
+}
+#main.positions-2 figure[data-index~="1"],
+#main.positions-2 figure[data-index~="2"],
+#main.positions-2 figure[data-index~="3"],
+#main.positions-2 figure[data-index~="4"],
+#main.positions-2 figure[data-index~="5"] {
+  top: var(--topFirstLine_positions-2);
+}
+#main.positions-2 figure[data-index~="6"],
+#main.positions-2 figure[data-index~="7"],
+#main.positions-2 figure[data-index~="8"],
+#main.positions-2 figure[data-index~="9"],
+#main.positions-2 figure[data-index~="10"] {
+  top: var(--topSecondLine_positions-2);
+}
+#main.positions-2 figure[data-index~="11"],
+#main.positions-2 figure[data-index~="12"] {
+  top: calc(var(--topThirdLine_positions-2) - var(--mainHeight)*0.025);
+}
+#main.positions-2 figure[data-index~="13"],
+#main.positions-2 figure[data-index~="14"],
+#main.positions-2 figure[data-index~="15"] {
+  top: var(--topThirdLine_positions-2);
+}
+#main.positions-2 figure[data-index~="16"],
+#main.positions-2 figure[data-index~="17"] {
+  top: calc(var(--topFourthLine_positions-2) - var(--mainHeight)*0.02);
+}
+#main.positions-2 figure[data-index~="18"],
+#main.positions-2 figure[data-index~="19"],
+#main.positions-2 figure[data-index~="20"] {
+  top: var(--topFourthLine_positions-2);
+}
+#main.positions-2 figure[data-index~="21"],
+#main.positions-2 figure[data-index~="22"] {
+  top: calc(var(--topFifthLine_positions-2) - var(--mainHeight)*0.01);
+}
+#main.positions-2 figure[data-index~="23"],
+#main.positions-2 figure[data-index~="24"],
+#main.positions-2 figure[data-index~="25"] {
+  top: var(--topFifthLine_positions-2);
+}
+#main.positions-2 figure[data-index~="26"],
+#main.positions-2 figure[data-index~="27"],
+#main.positions-2 figure[data-index~="28"],
+#main.positions-2 figure[data-index~="29"],
+#main.positions-2 figure[data-index~="30"] {
+  top: var(--topSixthLine_positions-2);
+}
+#main.positions-2 figure[data-index~="31"],
+#main.positions-2 figure[data-index~="32"],
+#main.positions-2 figure[data-index~="33"],
+#main.positions-2 figure[data-index~="34"],
+#main.positions-2 figure[data-index~="35"] {
+  top: var(--topSeventhLine_positions-2);
+}

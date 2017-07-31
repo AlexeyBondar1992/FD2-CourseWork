@@ -1,0 +1,32 @@
+body #content #left-door,
+body #content #right-door {
+  position: absolute;
+  top: 0;
+}
+body #content #left-door img,
+body #content #right-door img {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body #content #right-door {
+  text-align: right;
+}
+body #content .right-door-opening-begin {
+  transform: rotateY(83.2deg);
+  transform-origin: 97% 50%;
+  transition: transform 0.5s linear;
+}
+body #content .right-door-opening-end {
+  transform: rotateY(180deg);
+  transform-origin: 93% 50%;
+}
+body #content .left-door-opening-begin {
+  transform: rotateY(-81.13deg);
+  transform-origin: 3% 50%;
+  transition: transform 0.5s linear;
+}
+body #content .left-door-opening-end {
+  transform: rotateY(-180deg);
+  transform-origin: 7.2% 50%;
+}

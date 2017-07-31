@@ -1,0 +1,532 @@
+:root {
+  --navHeight: 70px;
+  --mainHeight: calc(100vh - var(--navHeight)*2);
+  --pos1topMargin: calc((var(--mainHeight) - 100vw*1.11567)/2);
+  --pos2leftMargin: calc((100vw - var(--mainHeight)*0.89632)/2);
+  --navMargin: 5px;
+}
+:root {
+  --topFirstLine_positions-1: calc(var(--pos1topMargin) + 13.8vw);
+  --topSecondLine_positions-1: calc(var(--pos1topMargin) + 25.0vw);
+  --topThirdLine_positions-1: calc(var(--pos1topMargin) + 37.8vw);
+  --topFourthLine_positions-1: calc(var(--pos1topMargin) + 50.1vw);
+  --topFifthLine_positions-1: calc(var(--pos1topMargin) + 61.8vw);
+  --topSixthLine_positions-1: calc(var(--pos1topMargin) + 73.8vw);
+  --topSeventhLine_positions-1: calc(var(--pos1topMargin) + 86.8vw);
+  --leftFirstColumn_positions-1: 24.5vw;
+  --leftSecondColumn_positions-1: 33.5vw;
+  --leftThirdColumn_positions-1: 45vw;
+  --leftFourthColumn_positions-1: 54vw;
+  --leftFifthColumn_positions-1: 62vw;
+  --topFirstLine_positions-2: 12.5%;
+  --topSecondLine_positions-2: 22.5%;
+  --topThirdLine_positions-2: 34%;
+  --topFourthLine_positions-2: 45%;
+  --topFifthLine_positions-2: 55.5%;
+  --topSixthLine_positions-2: 66.5%;
+  --topSeventhLine_positions-2: 78%;
+  --leftFirstColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.215);
+  --leftSecondColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.295);
+  --leftThirdColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.398);
+  --leftFourthColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.478);
+  --leftFifthColumn_positions-2: calc(var(--pos2leftMargin) + var(--mainHeight)*0.552);
+}
+#main {
+  height: var(--mainHeight);
+  width: 100%;
+  position: relative;
+}
+#main figure {
+  position: absolute;
+  margin: calc(var(--navMargin)/1.5);
+  padding: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+#main.positions-1 figure {
+  width: calc(7.5vw);
+  height: calc(10.3vw);
+  font-size: 2.5vw;
+  text-shadow: #ffffff 0.1vw 0.1vw 0.1vw, #ffffff -0.1vw -0.1vw 0.1vw;
+}
+#main.positions-1 figure img {
+  height: 7.2vw;
+}
+#main.positions-1 figure[data-index$="1"],
+#main.positions-1 figure[data-index$="6"] {
+  left: var(--leftFirstColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="2"],
+#main.positions-1 figure[data-index$="7"] {
+  left: var(--leftSecondColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="3"],
+#main.positions-1 figure[data-index$="8"] {
+  left: var(--leftThirdColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="4"],
+#main.positions-1 figure[data-index$="9"] {
+  left: var(--leftFourthColumn_positions-1);
+}
+#main.positions-1 figure[data-index$="5"],
+#main.positions-1 figure[data-index$="0"] {
+  left: var(--leftFifthColumn_positions-1);
+}
+#main.positions-1 figure[data-index~="1"],
+#main.positions-1 figure[data-index~="2"],
+#main.positions-1 figure[data-index~="3"],
+#main.positions-1 figure[data-index~="4"],
+#main.positions-1 figure[data-index~="5"] {
+  top: var(--topFirstLine_positions-1);
+}
+#main.positions-1 figure[data-index~="6"],
+#main.positions-1 figure[data-index~="7"],
+#main.positions-1 figure[data-index~="8"],
+#main.positions-1 figure[data-index~="9"],
+#main.positions-1 figure[data-index~="10"] {
+  top: var(--topSecondLine_positions-1);
+}
+#main.positions-1 figure[data-index~="11"],
+#main.positions-1 figure[data-index~="12"] {
+  top: calc(var(--topThirdLine_positions-1) - 3vw);
+}
+#main.positions-1 figure[data-index~="13"],
+#main.positions-1 figure[data-index~="14"],
+#main.positions-1 figure[data-index~="15"] {
+  top: var(--topThirdLine_positions-1);
+}
+#main.positions-1 figure[data-index~="16"],
+#main.positions-1 figure[data-index~="17"] {
+  top: calc(var(--topFourthLine_positions-1) - 2vw);
+}
+#main.positions-1 figure[data-index~="18"],
+#main.positions-1 figure[data-index~="19"],
+#main.positions-1 figure[data-index~="20"] {
+  top: var(--topFourthLine_positions-1);
+}
+#main.positions-1 figure[data-index~="21"],
+#main.positions-1 figure[data-index~="22"] {
+  top: calc(var(--topFifthLine_positions-1) - 1vw);
+}
+#main.positions-1 figure[data-index~="23"],
+#main.positions-1 figure[data-index~="24"],
+#main.positions-1 figure[data-index~="25"] {
+  top: var(--topFifthLine_positions-1);
+}
+#main.positions-1 figure[data-index~="26"],
+#main.positions-1 figure[data-index~="27"],
+#main.positions-1 figure[data-index~="28"],
+#main.positions-1 figure[data-index~="29"],
+#main.positions-1 figure[data-index~="30"] {
+  top: var(--topSixthLine_positions-1);
+}
+#main.positions-1 figure[data-index~="31"],
+#main.positions-1 figure[data-index~="32"],
+#main.positions-1 figure[data-index~="33"],
+#main.positions-1 figure[data-index~="34"],
+#main.positions-1 figure[data-index~="35"] {
+  top: var(--topSeventhLine_positions-1);
+}
+#main.positions-2 figure {
+  width: calc(var(--mainHeight)*0.073);
+  height: calc(var(--mainHeight)*0.09);
+  font-size: calc(var(--mainHeight)*0.022);
+  text-shadow: #ffffff 0.1vh 0.1vh 0.1vh, #ffffff -0.1vh -0.1vh 0.1vh;
+}
+#main.positions-2 figure img {
+  height: calc(var(--mainHeight)*0.064);
+}
+#main.positions-2 figure[data-index$="1"],
+#main.positions-2 figure[data-index$="6"] {
+  left: var(--leftFirstColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="2"],
+#main.positions-2 figure[data-index$="7"] {
+  left: var(--leftSecondColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="3"],
+#main.positions-2 figure[data-index$="8"] {
+  left: var(--leftThirdColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="4"],
+#main.positions-2 figure[data-index$="9"] {
+  left: var(--leftFourthColumn_positions-2);
+}
+#main.positions-2 figure[data-index$="5"],
+#main.positions-2 figure[data-index$="0"] {
+  left: var(--leftFifthColumn_positions-2);
+}
+#main.positions-2 figure[data-index~="1"],
+#main.positions-2 figure[data-index~="2"],
+#main.positions-2 figure[data-index~="3"],
+#main.positions-2 figure[data-index~="4"],
+#main.positions-2 figure[data-index~="5"] {
+  top: var(--topFirstLine_positions-2);
+}
+#main.positions-2 figure[data-index~="6"],
+#main.positions-2 figure[data-index~="7"],
+#main.positions-2 figure[data-index~="8"],
+#main.positions-2 figure[data-index~="9"],
+#main.positions-2 figure[data-index~="10"] {
+  top: var(--topSecondLine_positions-2);
+}
+#main.positions-2 figure[data-index~="11"],
+#main.positions-2 figure[data-index~="12"] {
+  top: calc(var(--topThirdLine_positions-2) - var(--mainHeight)*0.025);
+}
+#main.positions-2 figure[data-index~="13"],
+#main.positions-2 figure[data-index~="14"],
+#main.positions-2 figure[data-index~="15"] {
+  top: var(--topThirdLine_positions-2);
+}
+#main.positions-2 figure[data-index~="16"],
+#main.positions-2 figure[data-index~="17"] {
+  top: calc(var(--topFourthLine_positions-2) - var(--mainHeight)*0.02);
+}
+#main.positions-2 figure[data-index~="18"],
+#main.positions-2 figure[data-index~="19"],
+#main.positions-2 figure[data-index~="20"] {
+  top: var(--topFourthLine_positions-2);
+}
+#main.positions-2 figure[data-index~="21"],
+#main.positions-2 figure[data-index~="22"] {
+  top: calc(var(--topFifthLine_positions-2) - var(--mainHeight)*0.01);
+}
+#main.positions-2 figure[data-index~="23"],
+#main.positions-2 figure[data-index~="24"],
+#main.positions-2 figure[data-index~="25"] {
+  top: var(--topFifthLine_positions-2);
+}
+#main.positions-2 figure[data-index~="26"],
+#main.positions-2 figure[data-index~="27"],
+#main.positions-2 figure[data-index~="28"],
+#main.positions-2 figure[data-index~="29"],
+#main.positions-2 figure[data-index~="30"] {
+  top: var(--topSixthLine_positions-2);
+}
+#main.positions-2 figure[data-index~="31"],
+#main.positions-2 figure[data-index~="32"],
+#main.positions-2 figure[data-index~="33"],
+#main.positions-2 figure[data-index~="34"],
+#main.positions-2 figure[data-index~="35"] {
+  top: var(--topSeventhLine_positions-2);
+}
+body #content #left-door,
+body #content #right-door {
+  position: absolute;
+  top: 0;
+}
+body #content #left-door img,
+body #content #right-door img {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body #content #right-door {
+  text-align: right;
+}
+body #content .right-door-opening-begin {
+  transform: rotateY(83.2deg);
+  transform-origin: 97% 50%;
+  transition: transform 0.5s linear;
+}
+body #content .right-door-opening-end {
+  transform: rotateY(180deg);
+  transform-origin: 93% 50%;
+}
+body #content .left-door-opening-begin {
+  transform: rotateY(-81.13deg);
+  transform-origin: 3% 50%;
+  transition: transform 0.5s linear;
+}
+body #content .left-door-opening-end {
+  transform: rotateY(-180deg);
+  transform-origin: 7.2% 50%;
+}
+body .turnedButton {
+  background-image: linear-gradient(#c72222 0%, #ff0000 100%);
+}
+body nav,
+body footer {
+  height: var(--navHeight);
+  min-height: var(--navHeight);
+  width: 100%;
+}
+body nav ul,
+body footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  margin-left: calc(var(--navMargin) * 1.5);
+  margin-right: calc(var(--navMargin) * 1.5);
+  padding: 0;
+}
+body nav ul li,
+body footer ul li {
+  height: calc(var(--navHeight) - var(--navMargin) * 2);
+  min-width: calc(var(--navHeight) - var(--navMargin) * 2);
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: calc(var(--navMargin) * 2.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+}
+body nav ul li a,
+body footer ul li a {
+  display: block;
+  height: 100%;
+}
+body nav ul li a img,
+body footer ul li a img {
+  height: calc(var(--navHeight) - var(--navMargin) * 4);
+  margin: var(--navMargin);
+}
+body nav ul li:nth-of-type(2),
+body footer ul li:nth-of-type(2) {
+  position: relative;
+  color: white;
+  width: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body nav ul li:nth-of-type(2) input,
+body footer ul li:nth-of-type(2) input {
+  color: white;
+  font-size: 16pt;
+  position: absolute;
+  text-align: left;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  width: 75%;
+  border: none;
+}
+body nav ul li:nth-of-type(2) input::-webkit-inner-spin-button,
+body footer ul li:nth-of-type(2) input::-webkit-inner-spin-button {
+  display: none;
+}
+body nav ul li:nth-of-type(2) input::-webkit-input-placeholder,
+body footer ul li:nth-of-type(2) input::-webkit-input-placeholder {
+  color: white;
+}
+body nav ul li:nth-of-type(2) label,
+body footer ul li:nth-of-type(2) label {
+  text-align: right;
+  width: 75%;
+}
+body footer ul li:nth-of-type(2) {
+  width: calc(var(--navHeight) - var(--navMargin) * 2);
+}
+body #content #recipesList {
+  list-style-type: none;
+  padding: 0;
+  margin: calc(var(--navMargin) * 1.5);
+  color: #fff;
+  text-shadow: #000 1px 1px 1px;
+}
+body #content #recipesList > li {
+  border-radius: calc(var(--navMargin) * 2.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+  margin: calc(var(--navMargin) * 1.5) 0;
+}
+body #content #recipesList > li h1 {
+  font-size: 16pt;
+  margin: 0;
+  padding: calc(var(--navMargin) * 2);
+  text-align: center;
+}
+body #content #recipesList > li img {
+  width: 70%;
+  max-width: 300px;
+  margin: 0 15%;
+  border: solid 5px rgba(0, 0, 0, 0.7);
+  border-radius: calc(var(--navMargin) * 2.5);
+  box-shadow: #aaa 0 0 20px 1px, inset 0 0 20px 1px #444;
+}
+body #content #recipesList > li ol {
+  padding-bottom: var(--navMargin);
+}
+body #content #recipesList > li ol .absent {
+  color: #ff968c;
+}
+body #content #recipesList > li ol li {
+  text-transform: capitalize;
+}
+.button {
+  border: none;
+  border-radius: calc(var(--navMargin)*3);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+  padding: 0;
+  margin: 0;
+}
+.modal-placeholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-placeholder .modal {
+  margin: auto;
+  width: 80%;
+  max-width: 300px;
+  box-shadow: 0 0 20px #000;
+  border-radius: calc(var(--navMargin)*3);
+  background: rgba(255, 255, 255, 0.9);
+}
+.modal-placeholder .modal header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal-placeholder .modal header button {
+  border: none;
+  border-radius: calc(var(--navMargin)*3);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+  padding: 0;
+  margin: 0;
+  width: calc(var(--navHeight) - var(--navMargin)*2);
+  height: calc(var(--navHeight) - var(--navMargin)*2);
+}
+.modal-placeholder .modal header button img {
+  width: calc(var(--navHeight) - var(--navMargin)*7);
+  height: calc(var(--navHeight) - var(--navMargin)*7);
+}
+.modal-placeholder .modal .modal-body p {
+  font-size: 18pt;
+  margin: calc(var(--navMargin)*3);
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 0 8px #fff;
+  color: #333;
+}
+.modal-placeholder .modal footer {
+  display: flex;
+  justify-content: space-between;
+  min-height: calc(var(--navHeight) - var(--navMargin)*4);
+  height: calc(var(--navHeight) - var(--navMargin)*4);
+}
+.modal-placeholder .modal footer button {
+  border: none;
+  border-radius: calc(var(--navMargin)*3);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+  padding: 0;
+  margin: 0;
+  width: calc(var(--navHeight) + var(--navMargin)*5);
+  height: calc(var(--navHeight) - var(--navMargin)*4);
+  font-size: 14pt;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 3px #000;
+}
+.page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100500;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-preloader .spinner {
+  width: 80px;
+  height: 80px;
+  background: url('../images/preloader.gif') no-repeat 50% 50%;
+  background-size: contain;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 16pt;
+}
+body #content {
+  flex-grow: 1;
+  width: 100%;
+  overflow: scroll;
+  background: url(../images/refrigerator/noDoors.jpg) no-repeat 50% 50%;
+  background-size: contain;
+  position: relative;
+  perspective: 700px;
+}
+body #content::-webkit-scrollbar {
+  display: none;
+}
+body #content #productsCategories,
+body #content #products,
+body #content #selectedCategory {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 11pt;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body #content #productsCategories a,
+body #content #products a,
+body #content #selectedCategory a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body #content #productsCategories figure,
+body #content #products figure,
+body #content #selectedCategory figure {
+  margin: var(--navMargin);
+  padding: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: calc(var(--navHeight) + var(--navMargin) * 2.5);
+  height: calc(var(--navHeight) - var(--navMargin) * 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+  border: solid #3690F0 0.05px;
+  border-radius: calc(var(--navMargin) * 2.5);
+  background: linear-gradient(to bottom, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);
+}
+body #content #productsCategories figure img,
+body #content #products figure img,
+body #content #selectedCategory figure img {
+  height: calc(var(--navHeight) - var(--navMargin) * 6);
+}
+body #content #selectedCategory a {
+  width: 100%;
+}
+body #content #selectedCategory figure {
+  width: calc(100% - var(--navMargin) * 2);
+  border: none;
+  background-image: linear-gradient(#c72222 0%, #ff0000 100%);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+}
+body #content #products[data-location='fats'] figure,
+body #content #products[data-location='dairy'] figure {
+  height: calc(var(--navHeight) + var(--navMargin));
+}

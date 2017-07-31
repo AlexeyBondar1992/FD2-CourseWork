@@ -1,0 +1,7 @@
+:root {
+  --navHeight: 70px;
+  --mainHeight: calc(100vh - var(--navHeight)*2);
+  --pos1topMargin: calc((var(--mainHeight) - 100vw*1.11567)/2);
+  --pos2leftMargin: calc((100vw - var(--mainHeight)*0.89632)/2);
+  --navMargin: 5px;
+}

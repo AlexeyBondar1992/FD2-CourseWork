@@ -1,0 +1,80 @@
+@import "variables";
+@import "refrigeratorContentPositioning";
+@import "beginPageDoors";
+@import "navigation&footer";
+@import "recipesList";
+@import "ModalWindow";
+@import "Preloader";
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 16pt;
+
+  #content {
+    flex-grow: 1;
+    width: 100%;
+    overflow: scroll;
+    background: url(../images/refrigerator/noDoors.jpg) no-repeat 50% 50%;//было url(../images/noDoors.jpg) no-repeat 50% 50%;
+    background-size: contain;
+    position: relative;
+    perspective: 700px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    #productsCategories, #products, #selectedCategory {
+      height: 100%;
+      width: 100%;
+      color: white;
+      font-size: 11pt;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      figure {
+        margin: var(--navMargin);
+        padding: 0;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: ~"calc(var(--navHeight) + var(--navMargin) * 2.5)";
+        height: ~"calc(var(--navHeight) - var(--navMargin) * 2)";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        text-transform: capitalize;
+        border: solid #3690F0 0.05px;
+        border-radius: ~"calc(var(--navMargin) * 2.5)";
+        background: linear-gradient(to bottom, rgba(109, 179, 242, 1) 0%, rgba(84, 163, 238, 1) 50%, rgb(54, 144, 240) 51%, rgba(30, 105, 222, 1) 100%);
+        img {
+          height: ~"calc(var(--navHeight) - var(--navMargin) * 6)";
+        }
+      }
+    }
+    #selectedCategory {
+      a {
+        width: 100%;
+      }
+      figure {
+        width: ~"calc(100% - var(--navMargin) * 2)";
+        border: none;
+        background-image: linear-gradient(#c72222 0%, #ff0000 100%);
+        box-shadow: inset 0 -10px 10px -10px #000000;
+      }
+    }
+    #products[data-location='fats'], #products[data-location='dairy'] {
+      figure {
+        height: ~"calc(var(--navHeight) + var(--navMargin))";
+      }
+    }
+  }
+}

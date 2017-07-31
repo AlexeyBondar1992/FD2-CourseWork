@@ -1,0 +1,15 @@
+(function () {
+    'use strict';
+    const MAIN_PICTURE_WIDTH = 536,//px
+        MAIN_PICTURE_HEIGHT = 598,//px
+        DOOR_IMG_HEIGHT = 559,//px
+        MAIN_PICTURE_DIFF = MAIN_PICTURE_HEIGHT / MAIN_PICTURE_WIDTH;
+
+
+    window.DOOR_IMG_HEIGHT = DOOR_IMG_HEIGHT;
+    window.MAIN_PICTURE_DIFF = MAIN_PICTURE_DIFF;
+    window. MAIN_PICTURE_WIDTH = MAIN_PICTURE_WIDTH;
+    window.MAIN_PICTURE_HEIGHT = MAIN_PICTURE_HEIGHT;
+
+}());
+
