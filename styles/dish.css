@@ -1,0 +1,54 @@
+:root {
+  --navHeight: 70px;
+  --mainHeight: calc(100vh - var(--navHeight)*2);
+  --pos1topMargin: calc((var(--mainHeight) - 100vw*1.11567)/2);
+  --pos2leftMargin: calc((100vw - var(--mainHeight)*0.89632)/2);
+  --navMargin: 5px;
+}
+#dish {
+  margin: calc(var(--navMargin) * 1.5);
+  color: #fff;
+  text-shadow: #000 1px 1px 1px;
+  border-radius: calc(var(--navMargin) * 2.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+}
+#dish p {
+  margin: calc(var(--navMargin) * 3);
+  text-align: justify;
+  text-indent: 30px;
+}
+#dish h1 {
+  font-size: 20pt;
+  margin: 0;
+  padding: calc(var(--navMargin) * 2);
+  text-align: center;
+}
+#dish img {
+  width: 70%;
+  max-width: 300px;
+  margin: 0 15%;
+  border: solid 5px rgba(0, 0, 0, 0.7);
+  border-radius: calc(var(--navMargin) * 2.5);
+  box-shadow: #aaa 0 0 20px 1px, inset 0 0 20px 1px #444;
+}
+#dish ol {
+  font-size: 18pt;
+  padding-bottom: var(--navMargin);
+}
+#dish ol .absent {
+  color: #ff968c;
+}
+#dish ol li {
+  text-transform: capitalize;
+  font-size: 14pt;
+  margin: var(--navMargin);
+}
+#dish ol li a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: #000 1px 1px 1px;
+}
+#dish ol li p {
+  text-indent: 0;
+}

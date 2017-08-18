@@ -11,7 +11,7 @@
 
         load(location) {
             return super.load(location).then(location => {
-                let productCategoriesContent = localStorage.getItem('HS.productsCategories'),
+                let productCategoriesContent = sessionStorage.getItem('HS.productsCategories'),
                     divSelectedCategory = document.createElement('div'),
                     content = window.document.getElementById('content');
                 divSelectedCategory.id = 'selectedCategory';

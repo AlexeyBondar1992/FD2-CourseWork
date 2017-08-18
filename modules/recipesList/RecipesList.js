@@ -3,7 +3,27 @@
     class RecipesList extends PageFragment {
         constructor(...args) {
             super(...args);
-            this.initialIngredients = [];
+            this.Listeners = [
+                {
+                    selector: '.recipes-list',
+                    type: 'click',
+                    action: function hrefListener(el) {
+                        let parentLi,
+                        target = el.target;
+                        if(target.tagName === 'LI' && target.getAttribute('data-href')){
+                            parentLi = target;
+                        } else if(target.tagName === 'LI'){
+                            parentLi = target.parentNode.closest('li');
+                        } else {
+                            parentLi = target.closest('li');
+                        }
+                        if ( parentLi) {
+                            sessionStorage.setItem(`HS.recipe_href`,  parentLi.getAttribute('data-href'));
+                        }
+                        window.location = `${URL_BEGIN}/index.html#dish`;
+                    }
+                }
+            ];
 
         }
 
@@ -14,22 +34,23 @@
             content.style.background = 'none';
             body.style.backgroundSize = 'cover';
             let moduleName = this.name;
-            let mainPage = localStorage.getItem(`HS.main`),
-                oldMainPage = localStorage.getItem(`HS.OldMain`),
+            let mainPage = sessionStorage.getItem(`HS.main`),
+                oldMainPage = sessionStorage.getItem(`HS.OldMain`),
                 regex = /value="(\d+?)/,
-                numberOfMissed = parseInt(localStorage.getItem(`HS.menu`).match(regex) ? localStorage.getItem(`HS.menu`).match(regex)[1] : 0),
-                oldNumberOfMissed = parseInt(localStorage.getItem(`HS.oldNumberOfMissed`));
-            if (localStorage.getItem(`HS.${moduleName}`) && mainPage === oldMainPage && parseInt(numberOfMissed) === parseInt(oldNumberOfMissed)) {
+                numberOfMissed = parseInt(sessionStorage.getItem(`HS.menu`).match(regex) ? sessionStorage.getItem(`HS.menu`).match(regex)[1] : 0),
+                oldNumberOfMissed = parseInt(sessionStorage.getItem(`HS.oldNumberOfMissed`));
+            if (sessionStorage.getItem(`HS.${moduleName}`) && mainPage === oldMainPage && parseInt(numberOfMissed) === parseInt(oldNumberOfMissed)) {
                 return new Promise(function (resolve) {
-                    resolve(localStorage.getItem(`HS.${moduleName}`));
+                    resolve(sessionStorage.getItem(`HS.${moduleName}`));
                 });
             } else {
-                localStorage.setItem(`HS.OldMain`, mainPage);
-                localStorage.setItem(`HS.oldNumberOfMissed`, numberOfMissed);
+                sessionStorage.setItem(`HS.OldMain`, mainPage);
+                sessionStorage.setItem(`HS.oldNumberOfMissed`, numberOfMissed);
                 let htmlText,
                     ul = document.createElement('ul'),
                     _this = this,
                     PRELOADER = PreLoader.open();
+                ul.classList.add('recipes-list');
                 makeRequest('GET', `${URL_BEGIN}/modules/${moduleName}/${moduleName}.html`, 'text').then(res => htmlText = res);
                 if (mainPage) {
                     regex = /<figcaption>(\w+?)<\/figcaption>/g;
@@ -70,7 +91,6 @@
                                 let li = ul.children[i],
                                     h1, img, ol;
                                 if (li) {
-                                    console.log(result[i]);
                                     li.dataset.href = result[i].href;
                                     img = li.querySelector('img');
                                     h1 = li.querySelector('h1');
@@ -91,10 +111,9 @@
                                     }
                                 }
                             }
-                            console.log(ul.children);
                             if (ul.children.length === 0) {
                                 PRELOADER.then(preloader=>{PreLoader.close(preloader)});
-                                return (`<ul id="recipesList"> Dish isn't found </ul>`);
+                                return (`<ul id="recipesList"><li><p>Dish wasn't found </p></li></ul>`);
                             } else {
                                 PRELOADER.then(preloader=>{PreLoader.close(preloader)});
                                 return ul;
@@ -102,7 +121,7 @@
                         }).then(res => res);
                 } else {
                     return new Promise(function (resolve) {
-                        resolve(`<ul id="recipesList"> Dish isn't found </ul>`);
+                        resolve(`<ul id="recipesList"><li><p>Dish wasn't found </p></li></ul>`);
                     });
                 }
             }

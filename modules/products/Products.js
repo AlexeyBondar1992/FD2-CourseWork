@@ -9,7 +9,7 @@
                     action: function addProductToList(el) {
                         let _this=this,
                             elementClicked = el.target.closest('figure'),
-                        refrigeratorContent = localStorage.getItem('HS.main');
+                        refrigeratorContent = sessionStorage.getItem('HS.main');
                         if(refrigeratorContent && elementClicked){
                             let i = 1;
                             let positionSearch = function (str) {
@@ -20,7 +20,7 @@
                                 } else {
                                     let r = /<\/div>/gmi;
                                     let newStr = refrigeratorContent.replace(r,`<figure data-category =${_this.getAttribute('data-location')} data-index="${i}">${elementClicked.innerHTML}</figure></div>`);
-                                    localStorage.setItem('HS.main', newStr);
+                                    sessionStorage.setItem('HS.main', newStr);
                                     elementClicked.remove();
                                 }
                             };

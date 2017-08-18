@@ -364,6 +364,11 @@ body #content #recipesList > li ol .absent {
 body #content #recipesList > li ol li {
   text-transform: capitalize;
 }
+body #content #recipesList > li p {
+  text-align: center;
+  margin: 0;
+  padding: calc(var(--navMargin) * 3);
+}
 .button {
   border: none;
   border-radius: calc(var(--navMargin)*3);
@@ -456,6 +461,105 @@ body #content #recipesList > li ol li {
   background: url('../images/preloader.gif') no-repeat 50% 50%;
   background-size: contain;
 }
+#dish {
+  margin: calc(var(--navMargin) * 1.5);
+  color: #fff;
+  text-shadow: #000 1px 1px 1px;
+  border-radius: calc(var(--navMargin) * 2.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+}
+#dish p {
+  margin: calc(var(--navMargin) * 3);
+  text-align: justify;
+  text-indent: 30px;
+}
+#dish h1 {
+  font-size: 20pt;
+  margin: 0;
+  padding: calc(var(--navMargin) * 2);
+  text-align: center;
+}
+#dish img {
+  width: 70%;
+  max-width: 300px;
+  margin: 0 15%;
+  border: solid 5px rgba(0, 0, 0, 0.7);
+  border-radius: calc(var(--navMargin) * 2.5);
+  box-shadow: #aaa 0 0 20px 1px, inset 0 0 20px 1px #444;
+}
+#dish ol {
+  font-size: 18pt;
+  padding-bottom: var(--navMargin);
+}
+#dish ol .absent {
+  color: #ff968c;
+}
+#dish ol li {
+  text-transform: capitalize;
+  font-size: 14pt;
+  margin: var(--navMargin);
+}
+#dish ol li a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: #000 1px 1px 1px;
+}
+#dish ol li p {
+  text-indent: 0;
+}
+#settingsMenu li {
+  position: relative;
+  color: white;
+  width: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#settingsMenu li label {
+  text-align: right;
+  width: 75%;
+}
+#settings {
+  position: relative;
+}
+#settings .active {
+  transform: rotateX(0deg);
+}
+#settings div {
+  position: absolute;
+  transition: transform 0.3s linear;
+  transform-origin: 50% 0;
+  transform: rotateX(90deg);
+  margin: calc(var(--navMargin) * 1.5);
+  color: #fff;
+  text-shadow: #000 1px 1px 1px;
+  border-radius: calc(var(--navMargin) * 2.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 10px -10px #000000;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - var(--navMargin) * 3);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#settings div button {
+  height: calc(var(--navHeight) - var(--navMargin) * 3);
+  width: 60%;
+}
+#settings div input {
+  margin: calc(var(--navMargin) * 2);
+}
+#settings div input[type="text"] {
+  width: 60%;
+}
+#settings div select,
+#settings div button,
+#settings div input {
+  font-size: 14pt;
+}
 body {
   height: 100vh;
   width: 100vw;
@@ -464,6 +568,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 16pt;
+  position: relative;
 }
 body #content {
   flex-grow: 1;

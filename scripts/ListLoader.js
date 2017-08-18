@@ -12,12 +12,21 @@
         loadPageFragment(subcategory) {
             let moduleName = this.name;
             if (localStorage.getItem(`HS.${moduleName}`)) {
-                return new Promise(function (resolve) {
-                    resolve(localStorage.getItem(`HS.${moduleName}`));
-                });
+                if (!sessionStorage.getItem(`HS.${moduleName}`)){
+                    sessionStorage.setItem(`HS.${moduleName}`, localStorage.getItem(`HS.${moduleName}`));
+                }
             } else if(localStorage.getItem(`HS.${moduleName}/${subcategory}`)){
+                if (!sessionStorage.getItem(`HS.${moduleName}/${subcategory}`)){
+                    sessionStorage.setItem(`HS.${moduleName}/${subcategory}`, localStorage.getItem(`HS.${moduleName}/${subcategory}`));
+                }
+            }
+            if (sessionStorage.getItem(`HS.${moduleName}`)) {
                 return new Promise(function (resolve) {
-                    resolve(localStorage.getItem(`HS.${moduleName}/${subcategory}`));
+                    resolve(sessionStorage.getItem(`HS.${moduleName}`));
+                });
+            } else if(sessionStorage.getItem(`HS.${moduleName}/${subcategory}`)){
+                return new Promise(function (resolve) {
+                    resolve(sessionStorage.getItem(`HS.${moduleName}/${subcategory}`));
                 });
             } else {
                 return makeRequest('GET', `${URL_BEGIN}/modules/${moduleName}/${moduleName}.html`, 'text')

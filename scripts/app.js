@@ -3,9 +3,10 @@ let specOfApplication = {
         "begin": BeginPage,
         "main": MainPage,
         "productsCategories": ProductsCategoriesPage,
-        "searchRecipes": RecipesListPage
-       /* "dishes": DishesPage,
-        "settings": SettingsPage*/
+        "searchRecipes": RecipesListPage,
+        "dish": DishPage,
+        "settings": SettingsPage,
+        "customCategory": ProductsPage
     }, productsCategoriesList;
 productsCategoriesList = makeRequest("GET", 'resources/productsCategoriesList.json', 'json')
     .then(list =>{

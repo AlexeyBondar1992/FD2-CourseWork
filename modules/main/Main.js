@@ -10,9 +10,9 @@
                     action: function addProductToList(el) {
                         let elementClicked = el.target.closest('figure');
                         if (elementClicked) {
-                            let refrigiratorContent = localStorage.getItem(`HS.products/${elementClicked.getAttribute('data-category')}`);
+                            let refrigiratorContent = sessionStorage.getItem(`HS.products/${elementClicked.getAttribute('data-category')}`);
                             let str = refrigiratorContent.replace(/<\/div>$/gmi, `<figure>${elementClicked.innerHTML}</figure></div>`);
-                            localStorage.setItem(`HS.products/${elementClicked.getAttribute('data-category')}`, str);
+                            sessionStorage.setItem(`HS.products/${elementClicked.getAttribute('data-category')}`, str);
                             elementClicked.remove();
                         }
                     }

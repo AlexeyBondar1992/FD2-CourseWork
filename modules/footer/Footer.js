@@ -23,12 +23,14 @@
                             ]
                         }).then(function (value) {
                             if(value === 'Yes'||value === 'yes'){
-                                localStorage.clear();
-                                let main = document.getElementById('main');
+                                sessionStorage.clear();
+                                let main = document.getElementById('main'),
+                                    settingsBtn = document.querySelector('a[href="#settings"]');
+                                settingsBtn.parentNode.classList.remove('turnedButton');
                                 if (main) {
                                     main.innerHTML = '';
                                 }
-                                window.location = `${URL_BEGIN}/index.html#main`
+                                window.location = `${URL_BEGIN}/index.html#main`;
                             }
                         });
                     }

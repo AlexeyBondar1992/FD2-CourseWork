@@ -41,3 +41,8 @@ body #content #recipesList > li ol .absent {
 body #content #recipesList > li ol li {
   text-transform: capitalize;
 }
+body #content #recipesList > li p {
+  text-align: center;
+  margin: 0;
+  padding: calc(var(--navMargin) * 3);
+}
